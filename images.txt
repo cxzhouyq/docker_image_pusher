@@ -1,1 +1,1 @@
-snowdreamtech/frps:latest
+postgres
