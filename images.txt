@@ -1,5 +1,1 @@
-minio/minio:latest
-prom/prometheus:latest
-oliver006/redis_exporter:latest
-prometheuscommunity/postgres-exporter:latest
-grafana/grafana:latest
+newfuture/ddns:latest
