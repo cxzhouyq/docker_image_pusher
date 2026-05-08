@@ -1,1 +1,1 @@
-newfuture/ddns:latest
+mysql:8.5
