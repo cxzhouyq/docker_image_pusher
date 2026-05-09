@@ -13,10 +13,11 @@ env:
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
 
 jobs:
-  environment: test
+  
   build:
     name: Pull
     runs-on: ubuntu-latest
+    # environment: test
     steps:
       - name: Before freeing up disk space
         run: |
