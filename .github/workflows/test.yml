@@ -13,16 +13,15 @@ env:
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
 
 jobs:
-
   build:
     name: Pull
     runs-on: ubuntu-latest
     environment: test
+    env:
+      # 手动将vars上下文注入到步骤的环境变量中
+      VAR_A: ${{ vars.A }}
+      VAR_B: ${{ vars.B }}
     steps:
-    - name: Before freeing up disk space
-      run: |
-        echo "Before freeing up disk space ${{ secrets.ALIYUN_REGISTRY }}  ${{ vars.A }} -- ${{ vars.B }} --  ${{ vars.A }}"
-
-        echo "=============================================================================="
-        df -hT
-        echo "=============================================================================="
+      - name: Before freeing up disk space
+        run: |
+          echo "Before freeing up disk space ${{ secrets.ALIYUN_REGISTRY }} $VAR_A -- $VAR_B -- $VAR_A"
