@@ -17,10 +17,11 @@ jobs:
   build:
     name: Pull
     runs-on: ubuntu-latest
+    environment: test
     steps:
     - name: Before freeing up disk space
       run: |
-        echo "Before freeing up disk space ${{ secrets.ALIYUN_REGISTRY }}  ${{ vars.A }} ${{ test.vars.B }}"
+        echo "Before freeing up disk space ${{ secrets.ALIYUN_REGISTRY }}  ${{ vars.A }} ${{ vars.B }}"
 
         echo "=============================================================================="
         df -hT
