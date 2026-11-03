@@ -1,1 +1,2 @@
-rabbitmq:4.2.9-management-alpine
+eclipse-temurin:21-jre-jammy
+nginx:stable-alpine
